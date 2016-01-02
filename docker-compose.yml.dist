@@ -1,0 +1,29 @@
+proxy:
+  image: tutum/haproxy:0.2
+  ports:
+    - "9000:80"
+  links:
+    - web
+web:
+  build: .
+  volumes:
+    - .:/var/www/html:rw
+  links:
+    - mysql:mysql
+  environment:
+    - APP_ENV=null
+    - APP_DEBUG=true
+    - APP_URL=http://docker.local
+    - DB_CONNECTION=null
+    - DB_HOST=null
+    - DB_DATABASE=shipping_steam
+    - DB_USERNAME=shipping_steam
+    - DB_PASSWORD=changeMe
+mysql:
+  image: tutum/mysql
+  ports:
+    - "3306:3306"
+  environment:
+    - MYSQL_PASS=changeMe
+    - MYSQL_USER=shipping_steam
+    - ON_CREATE_DB=shipping_steam

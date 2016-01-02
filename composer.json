@@ -1,0 +1,33 @@
+{
+  "name": "jasonmichels/shipping-steam-ui",
+  "description": "UI for Shipping Steam website",
+  "keywords": [],
+  "license": "Closed",
+  "type": "project",
+  "require": {
+    "php": ">=5.6",
+    "monolog/monolog": "^1.17",
+    "nikic/fast-route": "^0.7.0"
+  },
+  "require-dev": {
+    "phing/phing": "^2.13",
+    "phpunit/phpunit": "^5.1",
+    "mockery/mockery": "0.9.*",
+    "halleck45/php-metrics": "dev-master",
+    "squizlabs/php_codesniffer": "dev-master",
+    "sebastian/phpcpd": "*",
+    "phpmd/phpmd" : "@stable",
+    "phpdocumentor/phpdocumentor": "^2.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "ShippingSteam\\": "src",
+      "ShippingSteam\\Tests\\": "tests"
+    }
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
