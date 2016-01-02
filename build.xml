@@ -127,12 +127,6 @@
         <exec passthru="true" checkreturn="false" command="vendor/bin/phpmd ${dir.src} html codesize,unusedcode,design,naming --reportfile ${dir.reports}/pmd.html --suffixes .php" />
     </target>
 
-    <!-- PHPDOC API documentation target -->
-    <target name="doc:phpdoc" description="Generating API documentation with PHPDoc">
-        <echo msg="Generating API documentation with PHPDoc..."/>
-        <exec passthru="true" checkreturn="true" command="vendor/bin/phpdoc -d ${dir.src} -t ${dir.docs}" />
-    </target>
-
     <!-- Set permission of storage folder -->
     <target name="build:storage:set-permissions">
         <exec command="chmod -R a+rwX ${dir.build}"/>

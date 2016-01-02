@@ -6,8 +6,9 @@
   "type": "project",
   "require": {
     "php": ">=5.6",
+    "slim/slim": "^3.0",
     "monolog/monolog": "^1.17",
-    "nikic/fast-route": "^0.7.0"
+    "slim/twig-view": "^2.0"
   },
   "require-dev": {
     "phing/phing": "^2.13",
@@ -16,8 +17,7 @@
     "halleck45/php-metrics": "dev-master",
     "squizlabs/php_codesniffer": "dev-master",
     "sebastian/phpcpd": "*",
-    "phpmd/phpmd" : "@stable",
-    "phpdocumentor/phpdocumentor": "^2.8"
+    "phpmd/phpmd" : "@stable"
   },
   "autoload": {
     "psr-4": {
