@@ -35,6 +35,12 @@ class HomeController
      */
     public function index(ServerRequestInterface $request, ResponseInterface $response, $args = [])
     {
+        // example how to return json
+//        $response = $origResponse->withHeader('Content-type', 'application/json');
+//        $response->getBody()->write(json_encode(['data' => 'isJson']));
+//        return $response;
+
+        // how to return twig view
         return $this->view->render($response, 'home.html', [
             'name' => 'Jason Michels'
         ]);
