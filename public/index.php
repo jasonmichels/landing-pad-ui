@@ -1,6 +1,6 @@
 <?php
 
-use ShippingSteam\Controllers\HomeController;
+use ShippingSteam\LandingPadUI\Controllers\HomeController;
 use Slim\App;
 use Slim\Container;
 use Psr\Http\Message\ServerRequestInterface;
@@ -39,5 +39,3 @@ $app->get('/', function (ServerRequestInterface $request, ResponseInterface $res
 });
 
 $app->run();
-
-die();
