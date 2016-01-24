@@ -1,4 +1,4 @@
-<?php namespace ShippingSteam\Tests;
+<?php namespace ShippingSteam\LandingPadUI\Tests;
 
 use PHPUnit_Framework_TestCase;
 
@@ -7,7 +7,7 @@ use PHPUnit_Framework_TestCase;
  *
  * Base test case
  *
- * @package ShippingSteam\Tests
+ * @package ShippingSteam\LandingPadUI\Tests
  * @author Jason Michels
  * @version $Id$
  */

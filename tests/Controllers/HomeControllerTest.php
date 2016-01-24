@@ -1,7 +1,8 @@
-<?php namespace ShippingSteam\Tests\Controllers;
+<?php namespace ShippingSteam\LandingPadUI\Tests\Controllers;
 
-use ShippingSteam\Controllers\HomeController;
-use ShippingSteam\Tests\TestCase;
+use ShippingSteam\LandingPadUI\Controllers\HomeController;
+use ShippingSteam\LandingPadUI\Tests\TestCase;
+use Slim\Views\Twig;
 use \Mockery as mockery;
 
 /**
@@ -9,7 +10,7 @@ use \Mockery as mockery;
  *
  * Tests for home controler
  *
- * @package ShippingSteam\Tests\Controllers
+ * @package ShippingSteam\LandingPadUI\Tests\Controllers
  * @author Jason Michels
  * @version $Id$
  */
@@ -20,16 +21,9 @@ class HomeControllerTest extends TestCase
      */
     public function testHomeControllerHasCorrectContracts()
     {
-        $home = new HomeController();
-        $this->assertInstanceOf(HomeController::class, $home);
-    }
+        $twig = mockery::mock(Twig::class);
 
-    /**
-     * Test home page method returns correct data
-     */
-    public function testHomePageLoadsCorrectly()
-    {
-        $home = new HomeController();
-        $this->assertStringMatchesFormat('This is the home page', $home->index());
+        $home = new HomeController($twig);
+        $this->assertInstanceOf(HomeController::class, $home);
     }
 }
